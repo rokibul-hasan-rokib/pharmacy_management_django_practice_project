@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 TIME_ZONE = 'Asia/Dhaka'  
 USE_TZ = True
 # Application definition
