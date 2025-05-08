@@ -9,3 +9,9 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+    
+    class Meta:
+        # verbose_name = 'Blog'
+        # verbose_name_plural = 'Blogs'
+        # ordering = ['-id']
+        db_table = 'blogs'
