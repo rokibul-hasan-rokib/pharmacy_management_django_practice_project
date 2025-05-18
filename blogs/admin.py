@@ -7,3 +7,6 @@ class BlogAdmin(admin.ModelAdmin):
     search_fields = ('title', 'description')
     list_filter = ('title',)
     # prepopulated_fields = {'slug': ('title',)}
+
+admin.site.site_header = "Blog Admin"
+admin.site.site_title = "Blog Admin Portal"
