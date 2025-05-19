@@ -10,5 +10,8 @@ class CabinAdmin(admin.ModelAdmin):
     search_fields = ('name', 'location')
     list_filter = ('location',)
 
+    class Meta:
+        model = Cabin
+
 
 admin.site.register(Cabin)
