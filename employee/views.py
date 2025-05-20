@@ -10,3 +10,8 @@ class EmployeeList(ListView):
     model = Employee
     template_name = 'employee/employee_list.html'
     context_object_name = 'employees'
+
+class EmployeeDetail(DetailView):
+    model = Employee
+    template_name = 'employee/employee_detail.html'
+    context_object_name = 'employee'
