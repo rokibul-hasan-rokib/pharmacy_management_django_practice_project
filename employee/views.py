@@ -21,3 +21,9 @@ class EmployeeCreate(CreateView):
     template_name = 'employee/employee_form.html'
     fields = ['name', 'designation', 'status']
     success_url = reverse_lazy('employee-list')
+
+class EmployeeUpdate(UpdateView):
+    model = Employee
+    template_name = 'employee/employee_form.html'
+    fields = ['name', 'designation', 'status']
+    success_url = reverse_lazy('employee-list')
