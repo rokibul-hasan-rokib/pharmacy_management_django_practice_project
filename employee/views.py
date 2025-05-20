@@ -15,3 +15,9 @@ class EmployeeDetail(DetailView):
     model = Employee
     template_name = 'employee/employee_detail.html'
     context_object_name = 'employee'
+
+class EmployeeCreate(CreateView):
+    model = Employee
+    template_name = 'employee/employee_form.html'
+    fields = ['name', 'designation', 'status']
+    success_url = reverse_lazy('employee-list')
