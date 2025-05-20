@@ -48,8 +48,6 @@ INSTALLED_APPS = [
     'djoser',
     'corsheaders',
     'blogs',
-    'Gallery',
-    'Contact',
 ]
 
 # MIDDLEWARE = [
