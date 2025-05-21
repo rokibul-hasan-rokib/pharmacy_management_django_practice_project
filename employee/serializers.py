@@ -23,13 +23,6 @@ class DesignationSerializer(serializers.ModelSerializer):
         read_only_fields = ['id']
 
 
-        class DesignationSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Designation
-        fields = ['id', 'name']
-        read_only_fields = ['id']
-
-
         
     def create(self, validated_data):
         return Employee.objects.create(**validated_data)
