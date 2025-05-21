@@ -6,3 +6,6 @@ class EmployeeSerializer(serializers.ModelSerializer):
         model = Employee
         fields = ['id', 'name', 'designation', 'status']
         read_only_fields = ['id']
+
+    def create(self, validated_data):
+        return Employee.objects.create(**validated_data)
