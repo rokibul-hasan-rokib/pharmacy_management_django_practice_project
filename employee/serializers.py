@@ -35,3 +35,9 @@ class EmployeeDetailSerializer(serializers.ModelSerializer):
         model = Employee
         fields = ['id', 'name', 'department', 'designation', 'status']
         read_only_fields = ['id']
+
+class EmployeeUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Employee
+        fields = ['id', 'name', 'department', 'designation', 'status']
+        read_only_fields = ['id']
