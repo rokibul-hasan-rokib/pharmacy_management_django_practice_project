@@ -28,3 +28,10 @@ class DesignationSerializer(serializers.ModelSerializer):
         return Employee.objects.create(**validated_data)
     
 class EmployeeDetailSerializer(serializers.ModelSerializer):
+    department = DepartmentSerializer()
+    designation = DesignationSerializer()
+
+    class Meta:
+        model = Employee
+        fields = ['id', 'name', 'department', 'designation', 'status']
+        read_only_fields = ['id']
