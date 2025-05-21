@@ -8,5 +8,13 @@ class EmployeeSerializer(serializers.ModelSerializer):
         read_only_fields = ['id']
 
 
+
+class DepartmentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Department
+        fields = ['id', 'name']
+        read_only_fields = ['id']
+
+        
     def create(self, validated_data):
         return Employee.objects.create(**validated_data)
