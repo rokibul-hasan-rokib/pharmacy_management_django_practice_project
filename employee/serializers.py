@@ -41,3 +41,4 @@ class EmployeeUpdateSerializer(serializers.ModelSerializer):
         model = Employee
         fields = ['id', 'name', 'department', 'designation', 'status']
         read_only_fields = ['id']
+        
